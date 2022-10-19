@@ -1,0 +1,827 @@
+@media screen and (min-width: 1201px) {
+  .__pc {
+    display: block;
+  }
+  .__sp {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .__pc {
+    display: block;
+  }
+  .__sp {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .__pc {
+    display: none;
+  }
+  .__sp {
+    display: block;
+  }
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  color: #444;
+  font-family: kinuta-maruminold-stdn, serif;
+  line-height: 1;
+  font-weight: 400;
+  font-size: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  html, body {
+    font-size: 9px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  html, body {
+    font-size: 7px;
+  }
+}
+
+html a, body a {
+  text-decoration: none;
+  color: #444;
+}
+
+html a:hover, body a:hover {
+  opacity: 0.5;
+  transition: .5s;
+}
+
+html h2, html h3, html h4, body h2, body h3, body h4 {
+  font-weight: 500;
+  color: #111;
+}
+
+html p, html li, body p, body li {
+  font-size: 1.6rem;
+  line-height: 2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.__en {
+  font-family: garamond-premier-pro, serif;
+}
+
+header {
+  width: 100%;
+  height: 10rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  transition: 1s;
+}
+
+header .headerWrap {
+  height: 100%;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+header .headerWrap nav {
+  font-size: 1.8rem;
+}
+
+header .headerWrap nav ul {
+  display: flex;
+  gap: 2.8rem;
+}
+
+header .headerWrap nav ul a {
+  color: #fff;
+}
+
+.scrollHeader {
+  background: #111;
+}
+
+@media screen and (max-width: 767px) {
+  header.scrollHeader {
+    background: transparent;
+  }
+  header.scrollHeader .headerWrap #toggle span.line {
+    background: #111;
+  }
+  header .headerWrap {
+    width: 90%;
+  }
+  header .headerWrap nav {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+    background: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+  }
+  header .headerWrap nav.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  header .headerWrap nav ul {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+  }
+  header .headerWrap nav ul li {
+    font-size: 2rem;
+  }
+  header .headerWrap nav ul a {
+    color: #111;
+  }
+  header .headerWrap #toggle {
+    width: 4.8rem;
+    height: 4.8rem;
+    position: fixed;
+    top: 2.6rem;
+    right: 5%;
+    z-index: 9998;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    transition: .5s;
+  }
+  header .headerWrap #toggle:hover {
+    opacity: 0.8;
+  }
+  header .headerWrap #toggle span.line {
+    width: 4.8rem;
+    height: 0.2rem;
+    background: #fff;
+    z-index: 9999;
+    transition: .5s;
+    border-radius: 0.2rem;
+    position: absolute;
+  }
+  header .headerWrap #toggle span.line#line1 {
+    top: 0.7rem;
+  }
+  header .headerWrap #toggle span.line#line1.line1 {
+    transform: rotate(-405deg);
+    top: 2.5rem;
+    background: #111;
+  }
+  header .headerWrap #toggle span.line#line2 {
+    top: 50%;
+  }
+  header .headerWrap #toggle span.line#line2.line2 {
+    opacity: 0;
+    visibility: hidden;
+  }
+  header .headerWrap #toggle span.line#line3 {
+    bottom: 0.4rem;
+  }
+  header .headerWrap #toggle span.line#line3.line3 {
+    transform: rotate(405deg);
+    bottom: 2.1rem;
+    background: #111;
+  }
+}
+
+#headline {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  color: #fff;
+  background: url(../img/bg_headline.webp) no-repeat;
+  background-size: cover;
+  background-position: top center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 767px) {
+  #headline {
+    background: url(../img/sp_bg_headline.webp) no-repeat;
+    background-size: cover;
+    background-position: top center;
+  }
+}
+
+#headline .logoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#headline .logoContainer .logo {
+  font-size: 8rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 767px) {
+  #headline .logoContainer .logo {
+    font-size: 12rem;
+  }
+}
+
+#headline .logoContainer .copy {
+  font-size: 1.8rem;
+  letter-spacing: 0.4rem;
+  font-weight: 500;
+  margin-left: 1.05rem;
+}
+
+@media screen and (max-width: 767px) {
+  #headline .logoContainer .copy {
+    font-size: 2.7rem;
+    letter-spacing: 0.6rem;
+  }
+}
+
+#headline .news {
+  position: absolute;
+  left: 5%;
+  bottom: 10rem;
+}
+
+#headline .news time {
+  border-right: 1px solid #fff;
+  padding-right: 1.6rem;
+  margin-right: 1.6rem;
+}
+
+main {
+  padding: 10rem 0;
+}
+
+main section {
+  padding: 10rem 0;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 767px) {
+  main section {
+    padding: 5rem 0;
+  }
+}
+
+main section#aboutSharoma {
+  width: 58%;
+}
+
+@media screen and (max-width: 1200px) {
+  main section#aboutSharoma {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main section#aboutSharoma {
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main section#aboutSharoma h2 {
+    line-height: 1.8;
+  }
+}
+
+main section .subHead {
+  margin-left: -2rem;
+  margin-bottom: 2rem;
+  font-size: 1.6rem;
+  color: #b0b0b0;
+  position: relative;
+  background: #fff;
+  width: fit-content;
+  padding-right: 1rem;
+}
+
+@media screen and (max-width: 767px) {
+  main section .subHead {
+    margin-bottom: 5rem;
+  }
+}
+
+main section .subHead::after {
+  content: '';
+  border-bottom: #b0b0b0 solid 1px;
+  width: 21.2rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+main section h2 {
+  font-size: 3.6rem;
+  margin-bottom: 5rem;
+  line-height: 1;
+}
+
+main section h3 {
+  font-size: 2.4rem;
+  margin-bottom: 4rem;
+}
+
+main section p {
+  margin-bottom: 4rem;
+  font-weight: 400;
+}
+
+main section#aboutShisha {
+  display: flex;
+  position: relative;
+}
+
+main section#aboutShisha .left {
+  position: relative;
+  padding-left: 21%;
+  padding-right: 4rem;
+}
+
+@media screen and (max-width: 1200px) {
+  main section#aboutShisha .left {
+    padding-left: 10%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main section#aboutShisha .left {
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+main section#aboutShisha .left .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+main section#aboutShisha p {
+  margin-bottom: 2rem;
+}
+
+main section#aboutShisha .image {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  z-index: -5;
+}
+
+main section#aboutShisha .image img {
+  width: auto;
+  height: 64rem;
+  object-fit: cover;
+}
+
+main section#aboutShisha .shishaImage {
+  width: 100%;
+  margin-bottom: 5rem;
+}
+
+main section#aboutShisha .shishaImage img {
+  width: 100%;
+}
+
+main section#menu {
+  width: 116rem;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+  main section#menu {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main section#menu {
+    width: 100%;
+  }
+}
+
+main section#menu .menuArea {
+  background: #f7f7f7;
+  padding: 4.5rem 0;
+}
+
+main section#menu .menuArea .menuMain {
+  margin: 0 auto;
+  width: 73rem;
+}
+
+@media screen and (max-width: 1200px) {
+  main section#menu .menuArea .menuMain {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main section#menu .menuArea .menuMain {
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+main section#menu .menuArea .menuMain h2 {
+  text-align: center;
+}
+
+main section#menu .menuArea .menuMain .menuList {
+  display: flex;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid #b0b0b0;
+}
+
+main section#menu .menuArea .menuMain .menuList:last-child {
+  display: block;
+  padding-top: 4rem;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+main section#menu .menuArea .menuMain .menuList li {
+  display: flex;
+  gap: 4.8rem;
+  font-size: 2.4rem;
+}
+
+@media screen and (max-width: 767px) {
+  main section#menu .menuArea .menuMain .menuList li {
+    font-size: 2rem;
+    gap: 3.6rem;
+  }
+}
+
+main section#menu .menuArea .menuMain .menuList li .menuName {
+  width: 6em;
+}
+
+main section#menu .menuArea .menuMain .menuList .menuWrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+main section#menu .menuArea .menuMain .menuList p {
+  font-size: 1.6rem;
+  color: #777;
+  margin-bottom: 0;
+}
+
+main section#menu .menuArea .recommend h3 {
+  text-align: center;
+  font-size: 3.6rem;
+  margin-bottom: 2rem;
+}
+
+main section#menu .menuArea .recommend p {
+  text-align: center;
+  color: #777;
+}
+
+main section#menu .menuArea .recommend .flavorList {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+  main section#menu .menuArea .recommend .flavorList {
+    width: 90%;
+  }
+}
+
+main section#menu .menuArea .recommend .flavorList ul {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
+
+@media screen and (max-width: 1200px) {
+  main section#menu .menuArea .recommend .flavorList ul {
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main section#menu .menuArea .recommend .flavorList ul {
+    flex-direction: column;
+  }
+}
+
+main section#menu .menuArea .recommend .flavorList ul li {
+  width: 32rem;
+}
+
+@media screen and (max-width: 1200px) {
+  main section#menu .menuArea .recommend .flavorList ul li {
+    width: 22rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main section#menu .menuArea .recommend .flavorList ul li {
+    width: 100%;
+  }
+}
+
+main section#menu .menuArea .recommend .flavorList ul li .flavorImage {
+  margin-bottom: 2rem;
+}
+
+main section#menu .menuArea .recommend .flavorList ul li .flavorImage img {
+  width: 100%;
+  height: auto;
+}
+
+main section#menu .menuArea .recommend .flavorList ul li .flavorName {
+  font-size: 2.4rem;
+  line-height: 1;
+  margin-bottom: 2rem;
+}
+
+main section#menu .menuArea .recommend .flavorList ul li p {
+  text-align: left;
+  color: #777;
+  margin-bottom: 0;
+}
+
+main section#access .headWrap {
+  width: 58%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 1200px) {
+  main section#access .headWrap {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main section#access .headWrap {
+    width: 100%;
+    padding: 0 5%;
+  }
+}
+
+main section#access .storeImage {
+  margin-bottom: 5rem;
+}
+
+main section#access .storeImage img {
+  width: 100%;
+  height: auto;
+}
+
+main section#access table {
+  font-size: 1.6rem;
+  width: 58%;
+  margin-left: auto;
+  margin-right: auto;
+  table-layout: fixed;
+}
+
+@media screen and (max-width: 1200px) {
+  main section#access table {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main section#access table {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+main section#access table tbody tr td {
+  font-size: 1.6rem;
+  padding-bottom: 2rem;
+}
+
+main section#access table tbody tr td.left {
+  width: 6em;
+  line-height: 2;
+}
+
+main section#access table tbody tr td.right {
+  line-height: 2;
+  padding-left: 3.6rem;
+}
+
+@media screen and (max-width: 767px) {
+  main section#access table tbody tr td.right {
+    padding-left: 2.4rem;
+  }
+}
+
+main section#access table tbody tr td.right span {
+  margin-left: 4rem;
+}
+
+@media screen and (max-width: 767px) {
+  main section#access table tbody tr td.right span {
+    margin-left: 2rem;
+  }
+}
+
+main section#reservation {
+  width: 38rem;
+  text-align: center;
+}
+
+main section#reservation h2 {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main section#reservation .box a {
+  font-size: 2.4rem;
+  border: 1px solid #444;
+  width: 38rem;
+  height: 12rem;
+  margin: 0 auto;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main section#reservation .box a:hover {
+  opacity: 1;
+  background: #444;
+  color: #fff;
+}
+
+footer {
+  background: #f7f7f7;
+  color: #444;
+}
+
+footer .navArea {
+  height: 32rem;
+  width: 58%;
+  border-bottom: #b0b0b0 solid 1px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3.6rem;
+  gap: 16rem;
+}
+
+@media screen and (max-width: 1200px) {
+  footer .navArea {
+    width: 80%;
+    gap: 10rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  footer .navArea {
+    width: 100%;
+    padding: 2rem 5%;
+    border: none;
+    height: auto;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: space-around;
+    align-items: flex-start;
+    position: relative;
+  }
+  footer .navArea::after {
+    position: absolute;
+    content: '';
+    border-bottom: 1px solid #b0b0b0;
+    width: 28rem;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+
+footer .navArea .left {
+  padding: 2rem 0;
+  margin-top: -3.6rem;
+}
+
+@media screen and (max-width: 767px) {
+  footer .navArea .left {
+    margin-top: 0;
+    width: 24rem;
+    margin: 0 auto;
+  }
+}
+
+footer .navArea .left .logo {
+  font-size: 7.2rem;
+  margin-bottom: 1rem;
+  color: #111;
+  line-height: 1;
+}
+
+footer .navArea .left .address {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  line-height: 2;
+  letter-spacing: -0.09rem;
+}
+
+footer .navArea .left .tel {
+  font-size: 1.4rem;
+}
+
+footer .navArea .right {
+  padding: 2rem 0;
+  margin-top: -2rem;
+}
+
+@media screen and (max-width: 767px) {
+  footer .navArea .right {
+    margin: 0 auto;
+    width: 24rem;
+  }
+}
+
+footer .navArea .right .sitemapCaption {
+  font-size: 2.4rem;
+  margin-bottom: 4rem;
+  font-weight: 600;
+}
+
+footer .navArea .right .sitemap {
+  display: flex;
+  gap: 8rem;
+  font-size: 1.8rem;
+}
+
+@media screen and (max-width: 767px) {
+  footer .navArea .right .sitemap {
+    gap: 4rem;
+  }
+}
+
+footer .navArea .right .sitemap ul li {
+  margin-bottom: 2rem;
+  line-height: 1;
+}
+
+footer .navArea .right .sitemap ul li:nth-child(3) {
+  margin-bottom: 0;
+}
+
+footer .navArea #fNav {
+  font-size: 1.6rem;
+}
+
+footer .navArea #fNav ul {
+  display: flex;
+  gap: 4rem;
+}
+
+footer .navArea #fNav ul a {
+  color: #fff;
+}
+
+footer #copyright {
+  height: 16rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #111;
+}
+/*# sourceMappingURL=style.css.map */
